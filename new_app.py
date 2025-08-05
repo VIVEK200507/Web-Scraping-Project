@@ -10,7 +10,7 @@ logging.basicConfig(filename="scrapper.log" , level=logging.INFO)
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-uri = "mongodb+srv://vickydharmwan:$vkkymongo2005V@cluster0.i8ywlla.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+uri = "mongodb+srv://vickydharmwan:{usermongopass}@cluster0.i8ywlla.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
 # Send a ping to confirm a successful connection
@@ -123,3 +123,4 @@ def index():
 
 if __name__=="__main__":
     app.run(host="0.0.0.0")
+
